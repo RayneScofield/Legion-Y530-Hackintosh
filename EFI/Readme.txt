@@ -1,42 +1,36 @@
 ****************************************************************************************
 
             
-                           本EFI支持10.13.6 - 10.15.x
+                           EFI support 10.13.6 - 10.15.x
 			 
-		       如果你参考了本EFI制作了新的EFI，请标明出处
+		       This EFI original source is from below
 
 	     https://github.com/xiaoMGitHub/LEGION_Y7000Series_Hackintosh
 
-			 Y7000系列黑苹果QQ群：1014806625
-
+			
 
 ****************************************************************************************
 
-1、使用前准备
-   1）从群里下载 Y7000系列一键修改BIOS_Beta_v1.8.zip
-   2) 解压后，双击批处理脚本
-   3）依次执行 5、7、8
-   4）如果是八代处理器则需要额外多执行 4
-   5）重启
+1、BIOS Configration
+   Press Fn + o + D enter into BIOS Advanced Setting when reboot the computer 
+   Press F9 reset to default setting then change below
+   1）turn the secure boot off
+   2) change Advanced>Debug settings>legacy URAT
+   3）turn off CFG lock
+   4）change DVMT to 64M
+   5）press F10 and save
+   6) reboot
 
-2、替换EFI，成功进入MacOS后，打开终端执行下面的命令
+2、Replace EFI after boot into macOS and execute the below command in terminal
 
    sudo sh -c "$(curl -fsSL https://gitee.com/xiaoMGit/Y7000Series_Hackintosh_Fix/raw/master/Script/Optimize.sh)"
 
-3、小键盘相关设置
+3、Setting for the Numbed
 
-  0）已经执行了上面的步骤
-  1）打开终端执行 open /usr/local/bin/
-  2）打开 系统偏好设置 > 安全性与隐私 > 隐私 > 辅助功能
-  3）将 setleds 添加到辅助功能
+  1）open terminal and execute open /usr/local/bin/    then you can see file "setleds"
+  2）open "system preference > security & privacy > Assistant
+  3）drag "settlers" into Assistant 
 
-4、屏蔽PM981、PM981a、2019款自带镁光固态
-
-   1) 打开 EFI/OC/config.plist
-   2) 搜索 SSDT-DNVMe.aml
-   3）将上方的 <key>Enabled</key> 修改为 <key>Enabled</key>
-	     <false/>                 <true/>
-	     
 
 
    
