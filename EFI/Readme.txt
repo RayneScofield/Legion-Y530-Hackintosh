@@ -25,7 +25,7 @@
 
    sudo sh -c "$(curl -fsSL https://gitee.com/xiaoMGit/Y7000Series_Hackintosh_Fix/raw/master/Script/Optimize.sh)"
 
-3、Setting for the Numbed
+3、Setting for the Numpad
 
   1）open terminal and execute open /usr/local/bin/    then you can see file "setleds"
   2）open "system preference > security & privacy > Assistant
