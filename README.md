@@ -3,3 +3,5 @@
 join the telegram channel if you want
 
 https://t.me/joinchat/AAAAAFeXebnHPGSgDI9Rzg
+
+download the release versions.
