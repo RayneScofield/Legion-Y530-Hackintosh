@@ -30,18 +30,21 @@ F9 reset to bios default setting if messed up. Following options need to change 
 Tools needed: 
 1. [MountEFI](https://github.com/corpnewt/MountEFI) to mount EFI
 2. [ProperTree](https://github.com/corpnewt/ProperTree) to edit config plist
-<br>
 
 Here just simplified, refer to [Dortania installation guide](https://dortania.github.io/OpenCore-Install-Guide/prerequisites.html#prerequisites) or [gibMacos](https://github.com/corpnewt/gibMacOS)
 # Post-installation
 1.  Mount system EFI partition, and copy EFI folder to root of system EFI partition
-2.  Execute the optimise script to fix Audio headphone, Numpad and Win/Mac system time.  
-sudo sh -c "$(curl -fsSL https://gitee.com/xiaoMGit/Y7000Series_Hackintosh_Fix/raw/master/Script/Optimize.sh)"  
-      - Extra setting for numpad to work  
-        1. go to folder /usr/local/bin/  where 'setleds' is located
-        2. open "system preference > security & privacy > Assistant
-        3. drag "settlers" into Assistant
-3. Optional: set the display resolution to 1600 ✕ 900, which give a good user experience. It's fine tuned by Display-9e5-6fb.kext in the EFI
+2.  Execute the below optimise script in terminal to fix Audio headphone, Numpad and Win/Mac system time. 
+
+```sh
+sudo sh -c "$(curl -fsSL https://gitee.com/xiaoMGit/Y7000Series_Hackintosh_Fix/raw/master/Script/Optimize.sh)"
+``` 
+and Extra setting for numpad to work:<br>
+1. go to folder /usr/local/bin/  where 'setleds' is located<br>
+2. open "system preference > security & privacy > Assistant<br>
+3. drag "settlers" into Assistant<br>
+
+Optional: go to system settings and set the display resolution to 1600 ✕ 900, which give a good user experience. It's fine tuned by Display-9e5-6fb.kext in the EFI.
 
 # Credit
 - [Acidanthera](https://github.com/acidanthera)
